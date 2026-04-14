@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТОП-ДРОВА | Купить Колотые Дрова с Доставкой</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        * { font-family: 'Play', sans-serif; }
+        h1, h2, h3 { font-family: 'Georgia', serif; font-weight: bold; }
+
+        .hero-bg {
+            background:
+                radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.8) 100%),
+                url('/firewood.jpg') center/cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+            pointer-events: none;
+        }
+
+        .text-panel {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border-left: 5px solid #000;
+            text-shadow: #ffffff -1px -1px 0px, #ffffff -1px 1px 0px, #ffffff 1px 1px 0px, #ffffff 1px -1px 0px;
+        }
+
+        .card-hover {
+            transition: all 0.4s ease;
+            border-top: 4px solid #fcd34d;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-bg {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.85);
+            position: absolute;
+            inset: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .city-tag {
+            background: #ffffff;
+            border-left: 4px solid #fcd34d;
+            transition: all 0.3s;
+        }
+
+        .city-tag:hover {
+            background: #fef3c7;
+            transform: translateX(4px);
+        }
+
+        .product-img {
+            object-fit: cover;
+            height: 200px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- HEADER -->
+    <nav class="fixed w-full z-50 bg-white shadow-lg border-b-4 border-yellow-300">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://static.wixstatic.com/media/70ac5e_5a4a817e1d89421b93d0ec9cc7e4f5c3~mv2.png/v1/fill/w_191,h_131,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/70ac5e_5a4a817e1d89421b93d0ec9cc7e4f5c3~mv2.png" alt="ТОП-ДРОВА" class="h-12">
+                <div>
+                    <p class="font-bold text-sm text-gray-900 leading-tight">" ТОП - ДРОВА "</p>
+                    <p class="text-xs text-gray-600">Ежедневно с 09:00 до 20:00</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex space-x-6 text-xs font-bold">
+                <a href="#main" class="hover:text-yellow-600 transition">Главная</a>
+                <a href="#types" class="hover:text-yellow-600 transition">Виды дров</a>
+                <a href="#coal" class="hover:text-yellow-600 transition">Уголь</a>
+                <a href="#prices" class="hover:text-yellow-600 transition">Цены</a>
+                <a href="#delivery" class="hover:text-yellow-600 transition">Доставка</a>
+            </div>
+
+            <button class="bg-yellow-300 hover:bg-yellow-400 text-black px-5 py-2 font-bold rounded text-sm transition">
+                Заказать
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO с реальным фоном дров -->
+    <section id="main" class="relative pt-32 pb-24 min-h-screen hero-bg flex items-center">
+        <div class="max-w-7xl mx-auto px-4 w-full">
+            <div class="text-panel p-10 md:p-14 rounded-lg max-w-2xl" data-aos="fade-up">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Купить Колотые Дрова с Доставкой по Москве и Московской Области
+                </h1>
+                <p class="text-lg text-gray-800 font-bold mb-4">
+                    Дрова колотые Берёзовые, Ольховые, Дубовые, Осиновые, Еловые, Сосновые. Уголь каменный и топливные брикеты.
+                </p>
+                <p class="text-gray-700 mb-6">
+                    Быстрая доставка, честные цены, гарантия качества. Доставляем в день заказа.
+                </p>
+                <button class="bg-gray-900 text-yellow-300 font-bold py-3 px-8 rounded hover:bg-gray-800 transition">
+                    <i class="fas fa-phone mr-2"></i>Заказать сейчас
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TYPES OF FIREWOOD с реальными фото -->
+    <section id="types" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-3">Виды дров</h2>
+                <div class="h-1 w-20 bg-yellow-300 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Birch - реальное фото -->
+                <div class="card-hover bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up">
+                    <img src="https://static.wixstatic.com/media/70ac5e_30643b669fb442bf9892418c8b2d5393~mv2.jpg/v1/crop/x_20,y_0,w_713,h_608/fill/w_282,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%D0%B1%D0%B5%D1%80%D0%B5%D1%81%D1%82%D0%B0%20%D0%B1%D0%B5%D1%80%D0%B5%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F%201_edited_edited.jpg" alt="Берёзовые дрова" class="product-img w-full">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Дрова Берёзовые</h3>
+                        <p class="text-gray-700 text-sm mb-3">Лучшие дрова для камина и печи. Жаркие, долго горят.</p>
+                        <p class="text-yellow-600 font-bold">от 2500 ₽/куб.м</p>
+                    </div>
+                </div>
+
+                <!-- Oak - реальное фото -->
+                <div class="card-hover bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://static.wixstatic.com/media/70ac5e_62a6d110f7884e958ac09947181ea776~mv2.jpg/v1/crop/x_48,y_0,w_704,h_601/fill/w_281,h_238,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/70ac5e_62a6d110f7884e958ac09947181ea776~mv2.jpg" alt="Дубовые дрова" class="product-img w-full">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Дрова Дубовые</h3>
+                        <p class="text-gray-700 text-sm mb-3">Премиум вариант. Максимум тепла, долгое горение.</p>
+                        <p class="text-yellow-600 font-bold">от 3200 ₽/куб.м</p>
+                    </div>
+                </div>
+
+                <!-- Aspen - реальное фото -->
+                <div class="card-hover bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://static.wixstatic.com/media/70ac5e_e308c4baf4fb4601b8d0e9f6021de2ac~mv2.jpg/v1/crop/x_86,y_0,w_829,h_693/fill/w_281,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/os_edited.jpg" alt="Осиновые дрова" class="product-img w-full">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Дрова Осиновые</h3>
+                        <p class="text-gray-700 text-sm mb-3">Экономный вариант, легко разжечь, мало дыма.</p>
+                        <p class="text-yellow-600 font-bold">от 1800 ₽/куб.м</p>
+                    </div>
+                </div>
+
+                <!-- Other types -->
+                <div class="card-hover bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://static.wixstatic.com/media/70ac5e_cacdad3fccb34b6e8617e55cfc13be35~mv2.jpg/v1/crop/x_8,y_0,w_584,h_498/fill/w_282,h_238,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/70ac5e_cacdad3fccb34b6e8617e55cfc13be35~mv2.jpg" alt="Ольховые дрова" class="product-img w-full">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Дрова Ольховые</h3>
+                        <p class="text-gray-700 text-sm mb-3">Мало золы, хороший жар, идеальны для бани.</p>
+                        <p class="text-yellow-600 font-bold">от 2300 ₽/куб.м</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COAL SECTION с реальным фото -->
+    <section id="coal" class="relative py-20 section-bg"
+             style="background-image: url('https://static.wixstatic.com/media/70ac5e_bf49f9f541cb4521a840d3db2405685c~mv2.jpg/v1/crop/x_0,y_11,w_1000,h_540/fill/w_350,h_188,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/70ac5e_bf49f9f541cb4521a840d3db2405685c~mv2.jpg');">
+        <div class="overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 content">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://static.wixstatic.com/media/70ac5e_ea12ed62306847bc96b6d24b45b0ec21~mv2.jpg/v1/crop/x_0,y_73,w_1000,h_854/fill/w_248,h_210,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0%D0%93-00561478new.jpg" alt="Уголь" class="rounded-lg shadow-xl border-4 border-yellow-300">
+                </div>
+                <div class="bg-white/95 p-10 rounded-lg backdrop-blur-sm border-l-5 border-yellow-300" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Уголь и Брикеты</h2>
+                    <p class="text-gray-800 mb-6 leading-relaxed">
+                        Древесный уголь и топливные брикеты премиум качества для барбекю и отопления.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-yellow-600 text-xl mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-900">Уголь каменный</p>
+                                <p class="text-gray-700 text-sm">Длительное горение, высокая теплоотдача</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-yellow-600 text-xl mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-900">Топливные брикеты</p>
+                                <p class="text-gray-700 text-sm">Экономичные, компактные, без запаха</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICES SECTION -->
+    <section id="prices" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Прозрачные Цены</h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gray-900 text-white p-8 rounded-lg border-2 border-yellow-300 card-hover" data-aos="zoom-in">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-6">Дрова (куб.м)</h3>
+                    <div class="space-y-4 border-b border-gray-700 pb-8 mb-6">
+                        <div class="flex justify-between text-gray-300">
+                            <span>Берёзовые</span>
+                            <span class="font-bold text-yellow-300">2500 ₽</span>
+                        </div>
+                        <div class="flex justify-between text-gray-300">
+                            <span>Ольховые</span>
+                            <span class="font-bold text-yellow-300">2300 ₽</span>
+                        </div>
+                        <div class="flex justify-between text-gray-300">
+                            <span>Осиновые</span>
+                            <span class="font-bold text-yellow-300">1800 ₽</span>
+                        </div>
+                        <div class="flex justify-between text-gray-300">
+                            <span>Дубовые</span>
+                            <span class="font-bold text-yellow-300">3200 ₽</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Доставка входит в стоимость</p>
+                </div>
+
+                <div class="bg-gray-900 text-white p-8 rounded-lg border-2 border-yellow-300 shadow-lg card-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-6">Уголь и Брикеты</h3>
+                    <div class="space-y-4 border-b border-gray-700 pb-8 mb-6">
+                        <div class="flex justify-between text-gray-300">
+                            <span>Уголь (50л мешок)</span>
+                            <span class="font-bold text-yellow-300">850 ₽</span>
+                        </div>
+                        <div class="flex justify-between text-gray-300">
+                            <span>Уголь (куб.м)</span>
+                            <span class="font-bold text-yellow-300">4500 ₽</span>
+                        </div>
+                        <div class="flex justify-between text-gray-300">
+                            <span>Брикеты (20 кг)</span>
+                            <span class="font-bold text-yellow-300">450 ₽</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Скидки на опт от 10 тонн</p>
+                </div>
+            </div>
+
+            <div class="bg-yellow-100 border-l-4 border-yellow-300 p-6 rounded-lg text-center">
+                <p class="text-gray-900 font-bold">
+                    <i class="fas fa-info-circle mr-2 text-yellow-600"></i>Бесплатная доставка по Москве и МО при заказе от 2000 ₽
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DELIVERY SECTION -->
+    <section id="delivery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">Районы Доставки</h2>
+            <p class="text-center text-gray-700 mb-12">Доставляем более чем в 60 населённых пунктов</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Москва</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Воскресенск</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Кубинка</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Люберцы</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Одинцово</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Чехов</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Раменское</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Подольск</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Химки</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Мытищи</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Дмитров</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Сергиев Посад</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Тверь</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">Тула</div>
+                <div class="city-tag p-3 rounded text-sm font-bold text-center">И ещё 50+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION с реальным фоном -->
+    <section class="relative py-24 section-bg"
+             style="background-image: url('https://static.wixstatic.com/media/70ac5e_ee11098f4b7a41629645cf1e34e761c2~mv2.jpg/v1/crop/x_0,y_107,w_1024,h_553/fill/w_349,h_187,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/70ac5e_ee11098f4b7a41629645cf1e34e761c2~mv2.jpg');">
+        <div class="overlay"></div>
+        <div class="max-w-5xl mx-auto px-4 text-center content">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">НУЖНЫ ДРОВА?</h2>
+            <p class="text-xl text-gray-800 mb-12">
+                Позвоните прямо сейчас — доставим в день заказа!
+            </p>
+
+            <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+                <button class="bg-gray-900 text-yellow-300 font-bold py-4 rounded-lg hover:bg-gray-800 transition">
+                    <i class="fas fa-phone mr-2"></i>Позвонить
+                </button>
+                <button class="border-2 border-gray-900 text-gray-900 font-bold py-4 rounded-lg hover:bg-gray-900 hover:text-yellow-300 transition">
+                    <i class="fas fa-whatsapp mr-2"></i>WhatsApp
+                </button>
+                <button class="border-2 border-gray-900 text-gray-900 font-bold py-4 rounded-lg hover:bg-gray-900 hover:text-yellow-300 transition">
+                    <i class="fas fa-envelope mr-2"></i>Email
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12 border-t-4 border-yellow-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="font-bold text-yellow-300 text-lg mb-2">" ТОП - ДРОВА "</p>
+                    <p class="text-gray-400">Продажа дров и угля с доставкой по Московской области</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-yellow-300 font-bold mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#main" class="hover:text-yellow-300">Главная</a></li>
+                        <li><a href="#prices" class="hover:text-yellow-300">Цены</a></li>
+                        <li><a href="#delivery" class="hover:text-yellow-300">Доставка</a></li>
+                    </ul>
+                </div>
+                <div class="text-right">
+                    <h4 class="text-yellow-300 font-bold mb-4">Контакты</h4>
+                    <p class="text-gray-400 text-sm mb-2">Ежедневно 09:00 - 20:00</p>
+                    <p class="text-gray-400 text-sm">Бесплатная доставка по МО</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-600 text-sm">
+                <p>© 2024 ТОП-ДРОВА. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out-cubic', once: true, offset: 100 });
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const t = document.querySelector(href);
+                    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
